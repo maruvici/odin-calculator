@@ -1,0 +1,133 @@
+/* Import Orbitron Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+body {
+    background-color: #fff4e6;
+    color:#fff4e6;
+    display: flex;
+    flex-direction: column;
+    font-family: Orbitron;
+    height: 100vh;
+}
+
+.header {
+    background-color: #4b3832;
+    font-size:x-large;
+    padding: 30px;
+    text-align: center;
+}
+
+.body-content {
+    background-color: #fff4e6;
+    display: flex;
+    flex: 1;
+    justify-content:space-between;
+}
+
+.body-content .calculator-container {
+    display:flex;
+    flex: 0 1 100%;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.calculator-container .calculator {
+    background-color: #4b3832;
+    border-radius: 20px;
+    display:flex;
+    height: auto;
+    flex:0 1 60%;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.calculator .calculator-screen {
+    align-items: center;
+    background-color: #fff4e6;
+    color: #4b3832;
+    display: flex;
+    flex: 0 1 0;
+    font-size: 75px;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.calculator .calculator-buttons {
+    background-color: #fff4e6;
+    display: flex;
+    flex: 1 1 0;
+    flex-flow: column wrap;
+    justify-content:space-evenly;
+    padding: 10px
+}
+
+.calculator .button-row {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.calculator-buttons button {
+    border: 5px solid #4b3832;
+    font-size: large;
+    font-weight:bold;
+    flex: 1 1 0;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+}
+
+button.num-button {
+    background-color: #be9b7b;
+}
+
+button.op-button,
+button.special-button, 
+button.equal-button {
+    background-color: #854442
+}
+
+button.equal-button {
+    flex: 1;
+    font-size: xx-large;
+}
+
+.body-content .logs-container {
+    color: #4b3832;
+    display:flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.logs-container .logs-title {
+    font-size: x-large;
+}
+
+.footer {
+    background-color: #4b3832;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 30px;
+    text-align: center;
+}
