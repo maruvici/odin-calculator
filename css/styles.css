@@ -63,7 +63,7 @@ body {
     color: #4b3832;
     display: flex;
     flex: 0 1 0;
-    font-size: 75px;
+    font-size: 50px;
     justify-content: flex-end;
     margin-bottom: 20px;
     padding: 10px;
@@ -96,15 +96,12 @@ body {
     text-align: center;
     width: 50px;
 }
+button {
+    background-color: #854442
+}
 
 button.num-button {
     background-color: #be9b7b;
-}
-
-button.op-button,
-button.special-button, 
-button.equal-button {
-    background-color: #854442
 }
 
 button.equal-button {
@@ -122,6 +119,12 @@ button.equal-button {
 
 .logs-container .logs-title {
     font-size: x-large;
+}
+
+.logs-container .logs {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
 }
 
 .footer {
