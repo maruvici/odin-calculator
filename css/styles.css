@@ -63,7 +63,7 @@ body {
     color: #4b3832;
     display: flex;
     flex: 0 1 0;
-    font-size: 50px;
+    font-size: 40px;
     justify-content: flex-end;
     margin-bottom: 20px;
     padding: 10px;
@@ -104,6 +104,9 @@ button.num-button {
     background-color: #be9b7b;
 }
 
+button.op-button:focus {
+    background-color: #4b3832;
+}
 button.equal-button {
     flex: 1;
     font-size: xx-large;
