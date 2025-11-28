@@ -107,6 +107,7 @@ button.num-button {
 button.op-button:focus {
     background-color: #4b3832;
 }
+
 button.equal-button {
     flex: 1;
     font-size: xx-large;
