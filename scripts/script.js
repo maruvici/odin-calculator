@@ -152,6 +152,28 @@ function clearScreen() {
 }
 
 // EVENT LISTENERS
+// KEYBOARD SUPPORT
+document.addEventListener("keydown", (e) => {
+  const opRegex = /[+\-x/]/gi;
+
+  if (isFinite(e.key)) {
+    displayNumber(e.key);
+  } else if (opRegex.test(e.key)) {
+    if (e.key == "/") {
+      pickOperation("÷");
+    } else {
+      pickOperation(e.key);
+    }
+  } else if (e.key == "=" || e.key == "Enter") {
+    equate();
+  } else if (e.key == ".") {
+    addDecimalPoint();
+  } else if (e.key == "Backspace") {
+    deleteNumber();
+  } else if (e.key == "Delete") {
+    clearScreen();
+  }
+});
 
 // DISPLAY NUMBERS ON SCREEN
 numButtons.forEach((button) => {
