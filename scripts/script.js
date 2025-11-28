@@ -1,9 +1,12 @@
 const numButtons = document.querySelectorAll(".num-button");
 const opButtons = document.querySelectorAll(".op-button");
-const equalButton = document.querySelector("#equal");
+const clearButton = document.querySelector("#clear");
 const decimalButton = document.querySelector("#dec");
+const deleteButton = document.querySelector("#delete");
+const equalButton = document.querySelector("#equal");
+const logs = document.querySelector(".logs");
 const screen = document.querySelector(".calculator-screen");
-let op1, op2, operation;
+let op1 = (op2 = operation = null);
 
 function add(a, b) {
   return +a + +b;
@@ -22,7 +25,6 @@ function divide(a, b) {
 }
 
 function addHistory(op1, op2, operation) {
-  const logs = document.querySelector(".logs");
   const log = document.createElement("div");
   log.classList.add("log");
   const result = screen.textContent;
@@ -78,5 +80,24 @@ equalButton.addEventListener("click", (e) => {
 decimalButton.addEventListener("click", (e) => {
   if (!screen.textContent.includes(".")) {
     screen.textContent += ".";
+  }
+});
+
+// DELETE LAST SYMBOL ON SCREEN
+deleteButton.addEventListener("click", (e) => {
+  let textLength = screen.textContent.length;
+  if (textLength > 1) {
+    screen.textContent = screen.textContent.substring(0, textLength - 1);
+  } else {
+    screen.textContent = "0";
+  }
+});
+
+// RESET EVERYTHING
+clearButton.addEventListener("click", (e) => {
+  op1 = op2 = operation = null;
+  screen.textContent = "0";
+  while (logs.firstChild) {
+    logs.removeChild(logs.lastChild);
   }
 });
