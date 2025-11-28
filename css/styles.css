@@ -127,6 +127,11 @@ button.equal-button {
     font-size: large;
 }
 
+.logs-container .log {
+    border-bottom: 1px solid #4b3832;
+    margin-top: 10px;
+}
+
 .footer {
     background-color: #4b3832;
     font-family: 'Roboto', sans-serif;
