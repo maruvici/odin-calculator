@@ -78,9 +78,11 @@ opButtons.forEach((button) => {
 
 // DISPLAY ANSWER AND LOG CALCULATION IN HISTORY
 equalButton.addEventListener("click", (e) => {
-  // op1 and op must exist (assumes op2 is value on screen)
-  // to display answer and add log to history
-  if (op1 && op) {
+  // To finalize operation, 3 conditions must be met:
+  // 1. Operand 1 exists
+  // 2. Operation exists
+  // 3. Op2 is a NEW number on screen (implied by appendMode)
+  if (op1 && op && appendMode) {
     op2 = screen.textContent;
     let ans = operate(op1, op2, op);
     if (isNaN(ans)) {
